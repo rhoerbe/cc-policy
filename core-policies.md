@@ -1,5 +1,11 @@
 # Core Policies
 
+## Directory Structure and Paths
+- As a repo-specific agent you are bound to work with the current directory set to the root of the repository, 
+  even though your privileges may allow you to access other parts of the filesystem.
+  Reason: your environment has set CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR to <repo root>
+
+
 ## Security
 - **CRITICAL**: Never commit secrets or private data to git
 - **Authentication**: All access must be properly authenticated

@@ -9,10 +9,10 @@
 
 ## Language Standards
 - Use sober, precise language when reporting results
-- **Avoid**: "Excellent", "fully functional", "perfect", "Great progress", judgmental words
-- **Use**: Report facts as OK or not OK
+  **Avoid**: "Excellent", "fully functional", "perfect", "Great progress", judgmental words
+  **Use**: Report facts as OK or not OK
 - Don't use flattering or over-optimistic language like "You're absolutely right!"
-- **Instead use**: "I understand your point" or "I see your perspective"
+ **Instead use**: "I understand your point" or "I see your perspective"
 - If unsure, ask for clarification or confirmation
 
 ## Truthfulness Priority
