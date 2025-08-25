@@ -5,6 +5,13 @@
   even though your privileges may allow you to access other parts of the filesystem.
   Reason: your environment has set CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR to <repo root>
 
+## Clean State
+- Your mother does not work here, clean up yourself you must.
+- If something is created/copied/restarted to replace something existing, remove or archive the existing something.
+  <example>
+    Container switched from rootful to rootless; a systemd unit after a system has been renamed/deprecated/etc,
+    a database on a new location after fixing some issue, and so forth.
+  </example>
 
 ## Security
 - **CRITICAL**: Never commit secrets or private data to git
@@ -16,6 +23,9 @@
 - Files managed with git must not bypass github for file transfers (e.g., no scp)
 - Ask for confirmation if this is unavoidable
 - Use proper SSH key management and authentication
+- If a test requires changes to be commited (e.g. when triggering a build on gh runner) always:
+  - prefix the commit message with "UNTESTED:"
+  - change the commit message to "TESTED: " with --amend after tests passed (agent or human)
 
 ## Critical Rules
 - **Feature additions**: ALWAYS wait for user feedback - no speculative features
