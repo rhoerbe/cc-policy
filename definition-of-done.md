@@ -13,8 +13,8 @@ When reporting results, observe these 4 points:
 4. **Don't claim success** when there were errors or timeouts
 
 ## Application-Level Testing
-- Verify functionality at application level, not just technical level
-- Example: Don't report "fully functional" after building image - verify service is running
+- Verify functionality at application level, not just unit test level
+  <example>Don't report "fully functional" after building image - verify service is running</example>
 - For deployments: verify functionality in both test and production environments
 - Include appropriate testing: unit tests, service checks, workflow validation
 
