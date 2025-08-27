@@ -36,6 +36,9 @@
 - If a test requires changes to be commited (e.g. when triggering a build on gh runner) always:
   - prefix the commit message with "UNTESTED:"
   - change the commit message to "TESTED: " with --amend after tests passed (agent or human)
+- Version Tracking
+  - relate commits to issues (e.g., "implements #123")
+  - Keep agent attribution short: "Co-authored-by Claude.ai"
 
 ## File Handling
 - For Linux files, always use Unix line endings (LF) and UTF-8 encoding

@@ -9,6 +9,7 @@
 - The containers for prod and test must have completely separated environments. They must not share data or configurations.
 - The staging envs are to be as consistent as possible. File, directory and env variable names shall be kept identical.
   <example>Do not name a file test.env or prod_settings.py. The staging environment must be implied only by the deployment location.</example>
+- CRITICAL: There is no podman on dev/Rainova.
 
 
 ## Regular deployment using containers
@@ -23,7 +24,7 @@
 ### Container configuration
 - Ensure proper environment separation (test vs production).
   All volumes, ports and configurations must be distinct.
-  Exception: A/B and blue/green deployments may share the same database.
+  Exception: blue/green deployments may share the same database.
 - Use environment variables for configuration, avoid hardcoding values.
 - Securely manage sensitive information (e.g., use .env files with proper permissions).
 - Implement health checks to monitor container and application status.
@@ -32,6 +33,8 @@
 - With defined exceptions, containers may run as root (e.g., github-runner).
 - Map volumes to host directories, do not use named or anonymous volumes.
 - Containers should put all logs in a single VOLUME. Typically, this is /app/log/<service> or /var/log/<service>.
+- TLS-termination is handled by the host system, not the container.
+
 ### Separation of concerns
 - Log rotation is handled by the host system, not the container.
 - Backup is handled by the host system, not the container.
