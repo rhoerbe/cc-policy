@@ -37,7 +37,7 @@
   - prefix the commit message with "UNTESTED:"
   - change the commit message to "TESTED: " with --amend after tests passed (agent or human)
 - Version Tracking
-  - relate commits to issues (e.g., "implements #123")
+  - relate commits to issues (e.g., "implements #123") where applicable
   - Keep agent attribution short: "Co-authored-by Claude.ai"
 
 ## File Handling

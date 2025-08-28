@@ -24,3 +24,6 @@
 - Changes to workflow or substantial GUI changes MUST be reviewed before implementation
 - Focus on Definition of Done (DoD) - if unclear from context, ask
 - Don't report success before checking actions were successful on application level
+
+## File Formatting
+- For all files on git, always use Unix line endings (LF) and UTF-8 encoding
