@@ -1,4 +1,4 @@
-**Bad Practice Collection**
+ **Bad Practice Collection**
 
 This document serves as a collection of bad practices in programming, software development, and system design. 
 It is intended to highlight common pitfalls and anti-patterns that developers, and coding agens in particular, should avoid.
