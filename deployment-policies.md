@@ -10,17 +10,19 @@
 - The staging envs are to be as consistent as possible. File, directory and env variable names shall be kept identical.
   <example>Do not name a file test.env or prod_settings.py. The staging environment must be implied only by the deployment location.</example>
 - CRITICAL: There is no podman on dev/Rainova.
+- There is a second dev environment on Outback as a containerized deployment.
+  It is used for testing things that require a public FQND. (renid@identinetics.com)
 
 
 ## Regular deployment using containers
 ### Processes
 - The systemd user service should handle the container lifecycle using Podman Quadlet. This implies rootless containers.
-- Always pull images from GitHub Container Registry (GHCR). 
   Prod can use existing images, test must always pull the latest image.
 - Verify authentication to GHCR before pulling images.
 - Use the deployment scripts provided in the repository for consistency.
 - Maintain rollback capability to previous versions.
 - Keep the existing database instance. Do not initialize or overwrite.
+- Images are built locally on Renia. GitHub Container Registry (GHCR) is not used.
 ### Container configuration
 - Ensure proper environment separation (test vs production).
   All volumes, ports and configurations must be distinct.
