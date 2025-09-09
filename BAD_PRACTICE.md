@@ -13,3 +13,6 @@ It is intended to highlight common pitfalls and anti-patterns that developers, a
 3. Incomplete refactoring. Renaming or moving files without updating all references.
    - **Why it's bad**: Causes broken links, compilation errors, and runtime exceptions.
    - **Better practice**: Never stop chasing all references to a file, and run tests until all passing
+4. Putting files in the project root.
+   - **Why it's bad**: Using the project root as trash bin, cluttering it with files that either need to be removed or put into the correct directory.
+   - **Better practice**: Stop creating files in project root that do not belong here on the long run
