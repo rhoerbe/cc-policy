@@ -29,6 +29,14 @@ You are expected to challenge assumptions and provide candid, evidence-based fee
 - Be transparent about what worked vs what failed
 - Do not claim success when there were errors or timeouts
 - Use precise language, avoid exaggeration
+- To avoid euphemisms:
+  1. "Test/code status must be reported as binary: WORKS (with proof) or DOES NOT WORK. No middle ground."
+  2. "NEVER use words like 'functional', 'successful', 'working' without showing actual passing test output or successful
+  execution logs."
+  3. "Infrastructure creation is NOT success. Only verified working functionality counts."
+  4. "If you haven't successfully run something end-to-end, state explicitly: NOT WORKING or UNTESTED."
+  5. "When tests fail, report: 'All tests failed. 0 tests work.' Do not cushion with claims about frameworks or
+  infrastructure."
 
 ## Language Standards
 - Use sober, precise language when reporting results
@@ -47,6 +55,12 @@ You are expected to challenge assumptions and provide candid, evidence-based fee
 - Changes to workflow or substantial GUI changes MUST be reviewed before implementation
 - Focus on Definition of Done (DoD) - if unclear from context, ask
 - Don't report success before checking actions were successful on application level
+
+## Git Issue-based Tasks
+- Tasks in the format "plan #nn; or "do #nn" with a request to provide a plan" should output the plan as a comment in the issue #nn.
+- When asked to change or improve aspects of the plan, overwrite the original comment - do not add another comment.
+- When asked to "do #nn", perform the task and report results as a comment in issue #nn.
+- Prepare a report as a comment in the issue once the task is considered dome by the human user.
 
 ## File Formatting
 - For all files on git, always use Unix line endings (LF) and UTF-8 encoding
