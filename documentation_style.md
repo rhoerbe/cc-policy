@@ -28,13 +28,13 @@ also, there are <!-- --> tags to comment on teh text.
 <del>#### Overview</>
 
 <del>The Ainer project uses a simplified database configuration with two databases:
-<replace>1. **Single Development Database**: `web/ainer_web/db.sqlite3` - Main Django database for development
+<replace>1. **Single Development Database**: `data/db.sqlite3` - Main Django database for development
 2. **In-Memory Test Database**: `:memory:` - Temporary database for unit testing
 </del>
 </replace><with>
 | Path                       | Description                                           | Settings                                 |
 |----------------------------|-------------------------------------------------------|------------------------------------------|
-|web/ainer_web/db.sqlite3    | Django database for development                       | web/ainer_web/ainer_web/settings.py      |
+|data/db.sqlite3    | Django database for development                       | web/ainer_web/ainer_web/settings.py      |
 |:memory:                    | Temporary database for unit testing                   | web/ainer_web/ainer_web/test_settings.py |
 </with>
 <!-- Precision: It is not the "Main Django database for development" but rather the only database used for development!-->
@@ -49,7 +49,7 @@ also, there are <!-- --> tags to comment on teh text.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Points to web/ainer_web/db.sqlite3
+        'NAME': BASE_DIR / 'db.sqlite3',  # Points to data/db.sqlite3
     }
 }
 ```
@@ -75,7 +75,7 @@ The project uses Django's standard `DJANGO_SETTINGS_MODULE` environment variable
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ainer_web.settings')
 ```
 
-- **Development**: Uses `ainer_web.settings` → `web/ainer_web/db.sqlite3`
+- **Development**: Uses `ainer_web.settings` → `data/db.sqlite3`
 - **Testing**: pytest-django automatically handles test database isolation
 <del>
 
@@ -86,7 +86,7 @@ The project includes persistent database structure validation using environment 
 **Environment Configuration** (`.env`):
 ```bash
 # Path to the single development database used for structure validation in tests
-PERSISTENT_DB_PATH=web/ainer_web/db.sqlite3
+PERSISTENT_DB_PATH=data/db.sqlite3
 ```
 
 **Purpose**: Validates that the development database has proper Django schema during unit tests
