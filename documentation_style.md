@@ -3,11 +3,12 @@
 Documentation should be concise and use Markdown format. Follow these guidelines:
 
 Describe the WHAT and WHERE in a rather minimalistic style. Touch the WHY when there are important design decisions.
-In general, do not:
+In general, do *not*:
 - cite code - users can reference the repository on their own
 - summarize benefits for general principles
 - include justifications for following best practices or common principles
-- Try to be compact and avoid structuring the text into sections unless it becomes too long. 
+- Never include documentation for things that are not the concern of the particular script or module.
+- Try to be compact and avoid structuring the text into sections unless it becomes too long.
 - when describing files, use a table format like this
 
 | Path          | Description                                           |
